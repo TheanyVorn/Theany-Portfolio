@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Theany's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <button class="theme-toggle" aria-label="Toggle theme">
+            <span class="theme-icon">🌞</span>
+        </button>
+        <div class="profile">
+            <img src="../img/pfp.jpg" alt="Theany pfp" class="profile-img">
+            <h1>Naratheany Vorn</h1>
+            <p>Sophomore Student at CADT and an aspiring web developer.</p>
+        </div>
+    </header>
+
+    <main>
+        <section id="about" class="section">
+            <h2>About Me</h2>
+            <p>Hi, I'm Naratheany, a thriving, dedicated, and passionate sophomore majoring in Computer Science at Cambodia Academy of Digital Technology. Currently, I am also pursuing a UX/UI Design and Web Development course at Sister of Code. I am actively working on projects to build my skills in this field. Beside learning hard skills, I am also into social work and I have experienced in managing projects as well as leading teams. 🚀</p>
+        </section>
+
+        <section id="projects" class="section">
+            <h2>My Projects</h2>
+            <div class="projects-grid">
+                <article class="project-card">
+                    <h3>Porsche Models 🏎️</h3>
+                    <p>Showcasing porsche models with animations using html, css, and js.</p>
+                    <a href="https://github.com/TheanyVorn/TheanyVorn-Final-Project-WD---Naratheany-Vorn.git">View Project</a>
+
+                </article>
+                <article class="project-card">
+                    <h3>Flower Shop 💐</h3>
+                    <p>CRUD application for managing a flower shop's inventory in Java project.</p>
+                    <a href="https://github.com/TheanyVorn/Flower-Shop.git">View Project</a>
+
+                </article>
+                <article class="project-card">
+                    <h3>Portfolio Site 👩🏻‍💻</h3>
+                    <p>A porfolio project was done in a team of 2 using HTML, CSS, and js.</p>
+                    <a href="https://github.com/TheanyVorn/Js-Project---Theany-Taingchhay.git">View Project</a>
+
+                </article>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <h2>Get in Touch</h2>
+            <div class="contact-links">
+                <a href="vornnaratheany@gmail.com" aria-label="Email">📧 Email</a>
+                <a href="https://github.com/TheanyVorn/" target="_blank" aria-label="GitHub">🐙 GitHub</a>
+                <a href="https://www.linkedin.com/in/naratheany-vorn-493846341" target="_blank" aria-label="LinkedIn">💼 LinkedIn</a>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const toggleButton = document.querySelector('.theme-toggle');
+        const toggleIcon = document.querySelector('.theme-icon');
+        toggleButton.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            toggleIcon.textContent = document.body.classList.contains('dark-mode') ? '🌙' : '🌞';
+        });
+    </script>
+</body>
+</html>
