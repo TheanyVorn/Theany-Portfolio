@@ -76,12 +76,44 @@ h1 {
     max-width: 900px;
     margin: 2rem auto;
     padding: 0 1.5rem;
+    margin-bottom: 60px;
 }
 
 h2 {
-    color: var(--accent-color);
-    margin-bottom: 1.5rem;
-    font-size: 1.8rem;
+  color: #ff8ab0;
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(120px, 1fr));
+  gap: 10px 40px;
+  list-style: none;
+  padding: 0;
+}
+.skills-grid li::before {
+  content: "✓ ";
+  color: #ff8ab0;
+}
+
+
+.education-list {
+    list-style: none; /* Remove default bullets */
+    padding-left: 0; /* Remove default padding */
+}
+
+.education-list li {
+    display: flex; /* Use flexbox to align items */
+    justify-content: space-between; /* Push date to the right */
+    align-items: center; /* Vertically center the items */
+    margin-bottom: 0.5rem; /* Add some spacing between items */
+}
+
+.education-list li span {
+    color: var(--text-color); /* Ensure text color matches theme */
+    font-size: 0.9rem; /* Slightly smaller font for dates, adjust as needed */
 }
 
 .projects-grid {
@@ -166,3 +198,30 @@ transition: background-color 0.3s ease, color 0.3s ease;
         font-size: 1rem;
     }
 }
+
+/* Add to your existing CSS */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.2;
+  background: 
+    radial-gradient(circle at 25% 25%, var(--accent-color), transparent 70%),
+    radial-gradient(circle at 75% 75%, var(--accent-color), transparent 70%);
+  background-size: 50% 50%;
+  animation: gradient-move 20s infinite alternate;
+}
+
+@keyframes gradient-move {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
