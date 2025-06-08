@@ -199,7 +199,6 @@ transition: background-color 0.3s ease, color 0.3s ease;
     }
 }
 
-/* Add to your existing CSS */
 body::before {
   content: '';
   position: fixed;
